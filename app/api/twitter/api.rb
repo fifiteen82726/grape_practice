@@ -10,7 +10,8 @@ module Twitter
     resource :statuses do
       desc 'Return a public timeline.'
       get :public_timeline do
-        Status.limit(20)
+        # Status.limit(20)
+        {:say => 'hahaha'}
       end
     end
   end
