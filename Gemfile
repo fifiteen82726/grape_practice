@@ -28,6 +28,13 @@ gem 'hashie-forbidden_attributes'
 
 gem 'grape-swagger'
 gem 'grape-entity'
+gem 'pry-rails', :group => :development
+
+group :development, :test do
+  
+  gem 'faker'
+ 
+end
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

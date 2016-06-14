@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+Status.destroy_all
+
+40.times do |i|
+	Status.create(:post => Faker::PhoneNumber.area_code)
+end
