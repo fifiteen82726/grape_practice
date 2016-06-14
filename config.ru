@@ -7,4 +7,4 @@ run Rails.application
 use ActiveRecord::ConnectionAdapters::ConnectionManagement
 
 
-run Twitter::API
+#run Twitter::API
