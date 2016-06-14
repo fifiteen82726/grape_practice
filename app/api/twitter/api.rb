@@ -9,21 +9,34 @@ module Twitter
     format :json
     
     add_swagger_documentation(
-    basd_path: "localhost:3000/v1",
+    basd_path: "/v1",
     mount_path: 'doc',
     info: {
       title: 'Twitter API'
     },
-    markdown: false
+    markdown: false,
+    hide_documentation_path: true,
+    hide_format: true,
+    include_base_url: true
     )
-    
+
 
     resource :statuses do
       desc 'Return a public timeline.'
-
       get :public_timeline do
         Status.limit(20)
       end
+
+      desc 'Get Smile'
+      get '/info/smile.json' do
+        {
+          :smail => {
+            :say => (":)")
+          }
+        }
+      end
+
+
 
 
     end
