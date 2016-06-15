@@ -30,7 +30,7 @@ gem 'grape-swagger'
 gem 'grape-entity'
 gem 'pry-rails', :group => :development
 
-group :development, :test do
+group :development, :test, :production do
   
   gem 'faker'
  
