@@ -8,17 +8,7 @@ module Twitter
     
     format :json
     
-    add_swagger_documentation(
-    basd_path: "/v1",
-    mount_path: 'doc',
-    info: {
-      title: 'Twitter API'
-    },
-    markdown: false,
-    hide_documentation_path: true,
-    hide_format: true,
-    include_base_url: true
-    )
+    
 
 
     resource :statuses do
@@ -35,10 +25,21 @@ module Twitter
           }
         }
       end
-
-
-
-
     end
+
+    add_swagger_documentation(
+    basd_path: "/v1",
+    mount_path: 'doc',
+    info: {
+      title: 'Twitter API',
+      description: "A description of the API."
+    },
+    hide_documentation_path: true,
+    hide_format: true,
+    include_base_url: true
+    )
+
+
+
   end
 end
