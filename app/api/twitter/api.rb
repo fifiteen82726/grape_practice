@@ -11,9 +11,9 @@ module Twitter
      # headers['Access-Control-Allow-Origin'] = header['Access-Control-Request-Method']='*'
       #headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
       headers['Access-Control-Allow-Origin'] = '*'
-headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
-headers['Access-Control-Request-Method'] = '*'
-headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
+      headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
+      headers['Access-Control-Request-Method'] = '*'
+      headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     end
     
     resource :statuses do
@@ -33,16 +33,16 @@ headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Typ
     end
 
     add_swagger_documentation(
-    basd_path: "/v1",
-    mount_path: 'doc',
-    info: {
-      title: 'Twitter API',
-      description: "A description of the API."
-    },
-    hide_documentation_path: true,
-    hide_format: true,
-    include_base_url: true
-    )
+      basd_path: "/v1",
+      mount_path: 'doc',
+      info: {
+        title: 'Twitter API',
+        description: "A description of the API."
+        },
+        hide_documentation_path: true,
+        hide_format: true,
+        include_base_url: true
+        )
 
 
 
