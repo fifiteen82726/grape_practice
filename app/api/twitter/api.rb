@@ -8,12 +8,14 @@ module Twitter
     
     format :json
     before do
-      header['Access-Control-Allow-Origin'] = header['Access-Control-Request-Method']='*'
+     # headers['Access-Control-Allow-Origin'] = header['Access-Control-Request-Method']='*'
+      #headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
+      headers['Access-Control-Allow-Origin'] = '*'
+headers['Access-Control-Allow-Methods'] = 'POST, PUT, DELETE, GET, OPTIONS'
+headers['Access-Control-Request-Method'] = '*'
+headers['Access-Control-Allow-Headers'] = 'Origin, X-Requested-With, Content-Type, Accept, Authorization'
     end
     
-    
-
-
     resource :statuses do
       desc 'Return a public timeline.'
       get :public_timeline do
