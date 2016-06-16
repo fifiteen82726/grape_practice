@@ -3,11 +3,11 @@ Rails.application.routes.draw do
 
 
 
-  #get 'test/index'
+  get 'test/index' => 'test#index'
 
-  root 'test#index'
+  root 'home#index'
 
-  #mount Twitter::API => '/v1'
+  mount Twitter::API => '/v1'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
