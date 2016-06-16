@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
 
 
+  get 'test/index'
+
   root 'home#index'
 
   mount Twitter::API => '/v1'
